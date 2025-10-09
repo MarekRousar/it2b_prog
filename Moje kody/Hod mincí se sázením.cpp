@@ -19,11 +19,17 @@ int main() {
 			return 1;
 		}
 		
+		start:
 		printf("Vitej ve hre hod minci, tvuj budget je %d minci, kolik si prejes vsadit?: ", ucet);
 		scanf_s("%d", &sazka);
+		
+		if (sazka > ucet) {
+			printf("Tolik penez nemas :D \n");
+			goto start;
+		}
+		
 		printf("Prejes si to vsadit na PANU(1), nebo na ORLA(2)?: ");
 		scanf_s("%d", &sazka_m);
-
 
 		printf("Zadej `1` pro hod minci a zadej `0` pro ukonceni programu: ");
 		scanf_s("%d", &hod);
