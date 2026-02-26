@@ -6,13 +6,11 @@ class Program
         
         if (a + b > c && a + c > b && c + b > a)
         {
-            Console.WriteLine("Trojuhelnik lze sestrojit");
-            return true;  
+            return true;
         }
         else
         {
-            Console.WriteLine("Trojuhelnik nelze sestrojit");
-            return false;  
+            return false;
         }
     }
 
@@ -27,6 +25,6 @@ class Program
         Console.Write("Zadej 3. stranu (c): ");
         int c = int.Parse(Console.ReadLine());
 
-        Console.WriteLine($"{Trojuhelnik(a, b, c)}");
+        Console.WriteLine($"Lze trojuhelnik sestrojit?: {Trojuhelnik(a, b, c)}");
     }
 }
